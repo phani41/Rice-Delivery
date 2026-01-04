@@ -5,30 +5,31 @@ const Navbar = () => {
   const { getTotalItems } = useCart();
 
   return (
-    <nav className="bg-green-600 text-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold hover:text-green-200">
-            Bhimavaram Rice Delivery
+    <>
+      <header className="bg-green-600 text-white text-center py-8">
+        <h1 className="text-4xl font-bold mb-2">SRINIVASA RICE</h1>
+        <p className="text-lg">Premium Quality Rice - Fresh & Affordable</p>
+      </header>
+      <nav className="bg-gray-200 py-3 text-center shadow-md">
+        <div className="flex justify-center space-x-8">
+          <Link to="/" className="text-green-600 font-bold hover:text-green-800 transition-colors">
+            Home
           </Link>
-          
-          <div className="flex space-x-6">
-            <Link to="/" className="hover:text-green-200 transition-colors">
-              Home
-            </Link>
-            <Link to="/products" className="hover:text-green-200 transition-colors">
-              Products
-            </Link>
-            <Link to="/cart" className="hover:text-green-200 transition-colors flex items-center">
-              Cart ({getTotalItems()})
-            </Link>
-            <Link to="/admin" className="hover:text-green-200 transition-colors">
-              Admin
-            </Link>
-          </div>
+          <Link to="/products" className="text-green-600 font-bold hover:text-green-800 transition-colors">
+            Products
+          </Link>
+          <Link to="/about" className="text-green-600 font-bold hover:text-green-800 transition-colors">
+            About Us
+          </Link>
+          <Link to="/contact" className="text-green-600 font-bold hover:text-green-800 transition-colors">
+            Contact
+          </Link>
+          <Link to="/cart" className="text-green-600 font-bold hover:text-green-800 transition-colors">
+            Cart ({getTotalItems()})
+          </Link>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 

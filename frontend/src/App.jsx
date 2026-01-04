@@ -7,15 +7,19 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
 import Admin from "./pages/Admin";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <main className="pb-16">
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/order-success" element={<OrderSuccess />} />
