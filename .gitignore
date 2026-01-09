@@ -11,6 +11,9 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# Firebase sensitive files
+backend/config/firebaseServiceAccount.json
+
 # Build outputs
 dist/
 build/
